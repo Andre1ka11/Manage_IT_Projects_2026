@@ -472,6 +472,7 @@
 ## 1. Схема C4 — Level 1: Контекст
 
 > Показывает систему как «чёрный ящик» в окружении пользователей и внешних сервисов.
+
 <img width="1672" height="861" alt="image" src="https://github.com/user-attachments/assets/3f09e82a-c7c2-4466-97c2-764f3ecf1a77" />
 
 
