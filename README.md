@@ -472,36 +472,8 @@
 ## 1. Схема C4 — Level 1: Контекст
 
 > Показывает систему как «чёрный ящик» в окружении пользователей и внешних сервисов.
+<img width="1672" height="861" alt="image" src="https://github.com/user-attachments/assets/3f09e82a-c7c2-4466-97c2-764f3ecf1a77" />
 
-```mermaid
-C4Context
-    title C4 Level 1 — Контекст: VetCare Online
-
-    Person(owner, "Владелец животного", "Ищет ветеринара, начинает консультацию 24/7")
-    Person(vet, "Ветеринар", "Принимает онлайн-консультации через платформу")
-    Person(partner, "B2B-партнёр (зоосеть)", "Управляет white-label настройками")
-    Person(admin, "Администратор", "Верифицирует врачей, управляет платформой")
-
-    System(vetcare, "VetCare Online", "White-label платформа телемедицины для питомцев")
-
-    System_Ext(yukassa, "ЮKassa", "Обработка платежей")
-    System_Ext(push, "Push APNS/FCM", "Мобильные уведомления")
-    System_Ext(email, "Email-сервис", "Маркетинговые рассылки")
-    System_Ext(tgapi, "ТГ АПИ", "Telegram-уведомления для admin")
-
-    Rel(owner, vetcare, "ищет ветеринара, начинает консультацию")
-    Rel(vet, vetcare, "принимает консультации")
-    Rel(partner, vetcare, "управляет white-label")
-    Rel(admin, vetcare, "верифицирует врачей, управляет платформой")
-    Rel(admin, tgapi, "посылает вопрос поддержке")
-
-    Rel(vetcare, yukassa, "запросы на обработку платежа")
-    Rel(vetcare, push, "уведомлять пользователя о смене статуса")
-    Rel(vetcare, email, "маркетинговые рассылки")
-    Rel(vetcare, tgapi, "сообщение о консультации для admin")
-```
-
----
 
 ## 2. Схема C4 — Level 2: Контейнеры
 
@@ -561,22 +533,8 @@ C4Context
 | **Telegram Bot API** | Уведомления для admin | Быстро, бесплатно, команда уже в Telegram |
 | **WebRTC (встроен)** | Видеозвонки | Peer-to-peer видео без платного сервиса на MVP. При масштабировании — переход на LiveKit или Daily.co |
 
-### Итоговая схема стека
 
-```
-Владелец        Ветеринар / Партнёр      Администратор
-    │                   │                      │
-React Native         React (Vite)          React (Vite)
-    │                   │                      │
-    └───────────────────┴──────────────────────┘
-                        │ HTTPS
-                      nginx
-                        │
-                   FastAPI (Python)
-                  /      |      \
-           Celery      Redis   WebSocket
-                        │
-                   PostgreSQL
-```
+
+
 
 
