@@ -463,7 +463,7 @@
 }
 
 
-# VetCare Online — Практическое задание №4
+Практическое задание №4
 
 > **Тема:** Телемедицина для питомцев | **Модель:** B2B2C | **White-label платформа**
 
@@ -481,7 +481,7 @@
 > Показывает внутреннее устройство системы: приложения, сервисы, базы данных и их взаимодействие.
 
 
-(url)<img width="1642" height="1289" alt="image" src="https://github.com/user-attachments/assets/cfc6ae33-924c-4cc0-984e-fcaa941f139f" />
+<img width="1642" height="1289" alt="image" src="https://github.com/user-attachments/assets/cfc6ae33-924c-4cc0-984e-fcaa941f139f" />
 
 
 
